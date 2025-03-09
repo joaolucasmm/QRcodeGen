@@ -1,4 +1,28 @@
 .code {
     margin: auto;
     margin-top: 50px;
+    max-width: 500px;
+}
+
+.code-media {
+    height: 500px;
+}
+
+.code-title {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.code-description {
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .code {
+        max-width: 350px;
+    }
+
+    .code-media {
+        height: 350px;
+    }
 }

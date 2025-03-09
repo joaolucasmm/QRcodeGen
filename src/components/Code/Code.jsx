@@ -15,17 +15,17 @@ function Insert({ genImage }) {
     }, [genImage]);
 
     return (
-        <Card sx={{ maxWidth: 500 }} className='code'>
+        <Card className='code'>
             <CardMedia
-                sx={{ height: 500 }}
+                className='code-media'
                 image={url}
                 title="green iguana"
             />
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div" sx={{mt: 2, mb: 2}}>
+                <Typography gutterBottom variant="h5" component="div" className='code-title'>
                     QR Code to {genImage}
                 </Typography>
-                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                <Typography variant="body2" className='code-description'>
                     Click in the download button to save this QR Code image.
                 </Typography>
             </CardContent>
