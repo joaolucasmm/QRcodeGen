@@ -6,12 +6,13 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-function Insert() {
+function Insert({ genImage }) {
+    
     return (
         <Card sx={{ maxWidth: 500 }}>
             <CardMedia
                 sx={{ height: 500 }}
-                image="/static/images/cards/contemplative-reptile.jpg"
+                image={`http://api.qrserver.com/v1/create-qr-code/?data=${genImage}&size=500x500`}
                 title="green iguana"
             />
             <CardContent>

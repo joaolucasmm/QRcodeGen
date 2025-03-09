@@ -3,12 +3,12 @@ import Insert from './components/Insert/Insert'
 import Code from './components/Code/Code'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [content, setContent] = useState("Hello World!");
 
   return (
     <>
-      <Insert/>
-      <Code />
+      <Insert setContent={setContent}/>
+      <Code genImage={content}/>
     </>
   )
 }
