@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState, useEffect } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -8,11 +8,17 @@ import Typography from '@mui/material/Typography';
 import './Code.css'
 
 function Insert({ genImage }) {
+    const [url, setUrl] = useState(`http://api.qrserver.com/v1/create-qr-code/?data=${genImage}&size=500x500`);
+
+    useEffect(() => {
+        setUrl(`http://api.qrserver.com/v1/create-qr-code/?data=${genImage}&size=500x500`);
+    }, [genImage]);
+
     return (
         <Card sx={{ maxWidth: 500 }} className='code'>
             <CardMedia
                 sx={{ height: 500 }}
-                image={`http://api.qrserver.com/v1/create-qr-code/?data=${genImage}&size=500x500`}
+                image={url}
                 title="green iguana"
             />
             <CardContent>
@@ -25,7 +31,7 @@ function Insert({ genImage }) {
             </CardContent>
             <CardActions>
                 <Button size="small" onClick={async () => {
-                    const response = await fetch(`http://api.qrserver.com/v1/create-qr-code/?data=${genImage}&size=500x500`);
+                    const response = await fetch(url);
                     const blob = await response.blob();
                     const downloadLink = document.createElement("a");
                     downloadLink.href = URL.createObjectURL(blob);
