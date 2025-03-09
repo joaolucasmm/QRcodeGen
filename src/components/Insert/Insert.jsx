@@ -6,7 +6,7 @@ function Insert({ setContent }) {
     const [input, setInput] = useState("");
     return (
         <>
-            <TextField id="outlined-basic" label="Outlined" variant="outlined" onChange={e => setInput(e.target.value)} />
+            <TextField id="outlined-basic" label="QR Content" variant="outlined" onChange={e => setInput(e.target.value)} />
             <Button variant="contained" 
             onClick={() => {
                 setContent(input);
