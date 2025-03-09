@@ -5,10 +5,11 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import './Code.css'
 
 function Insert({ genImage }) {
     return (
-        <Card sx={{ maxWidth: 500 }}>
+        <Card sx={{ maxWidth: 500 }} className='code'>
             <CardMedia
                 sx={{ height: 500 }}
                 image={`http://api.qrserver.com/v1/create-qr-code/?data=${genImage}&size=500x500`}
