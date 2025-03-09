@@ -16,7 +16,7 @@ function Insert({ genImage }) {
                 title="green iguana"
             />
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h5" component="div" sx={{mt: 2, mb: 2}}>
                     QR Code to {genImage}
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
@@ -31,7 +31,6 @@ function Insert({ genImage }) {
                     downloadLink.href = URL.createObjectURL(blob);
                     downloadLink.download = "QRcode.png";
                     downloadLink.click();
-
                 }}>Download</Button>
             </CardActions>
         </Card>
