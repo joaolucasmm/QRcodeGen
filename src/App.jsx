@@ -3,7 +3,7 @@ import Insert from './components/Insert/Insert'
 import Code from './components/Code/Code'
 
 function App() {
-  const [content, setContent] = useState("Hello World!");
+  const [content, setContent] = useState("https://joaolucasmm.github.io/portfolio");
 
   return (
     <>
